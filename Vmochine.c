@@ -44,6 +44,14 @@ void eval(int instr){
             printf("Popped %d\n", val_popped);
             break;
         }
+        case ADD: {
+            int a= stack[sp--];
+            int b= stack[sp--];
+            int result =b+a; 
+            sp++;
+            stack[sp]=result;
+            break;
+        }
     }
 }
 int main(){
